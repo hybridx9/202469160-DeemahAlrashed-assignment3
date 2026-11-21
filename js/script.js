@@ -48,3 +48,42 @@ contactForm.addEventListener("submit", function (event) {
         contactForm.reset();
     }
 });
+
+// Fetch public repositories from GitHub
+const repoList = document.getElementById("repo-list");
+const repoMessage = document.getElementById("repo-message");
+
+async function loadRepositories() {
+    repoMessage.textContent = "Loading repositories...";
+
+    try {
+        const response = await fetch("https://api.github.com/users/hybridx9/repos");
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch repositories");
+        }
+
+        const repositories = await response.json();
+
+        repoList.innerHTML = "";
+
+        repositories.forEach(function (repo) {
+            const repoItem = document.createElement("div");
+
+            const repoLink = document.createElement("a");
+            repoLink.href = repo.html_url;
+            repoLink.textContent = repo.name;
+            repoLink.target = "_blank";
+            repoLink.rel = "noopener noreferrer";
+
+            repoItem.appendChild(repoLink);
+            repoList.appendChild(repoItem);
+        });
+
+        repoMessage.textContent = "";
+    } catch (error) {
+        repoMessage.textContent = "Unable to load repositories. Please try again later.";
+    }
+}
+
+loadRepositories();
