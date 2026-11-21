@@ -64,6 +64,18 @@
         <!-- Display public repositories from GitHub -->
         <section id="github-projects">
             <h2>My GitHub Repositories</h2>
+            <label for="repo-filter">Filter by language:</label>
+            <select id="repo-filter">
+                <option value="all">All Repositories</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="other">Other Languages</option>
+            </select>
+            
+            <label for="repo-sort">Sort by name:</label>
+            <select id="repo-sort">
+                <option value="az">A–Z</option>
+                <option value="za">Z–A</option>
+            </select>
             <div id="repo-list"></div>
             <p id="repo-message" role="status"></p>
         </section>
