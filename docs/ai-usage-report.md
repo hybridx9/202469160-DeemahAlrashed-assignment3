@@ -45,6 +45,14 @@ These decisions, implementation changes, and tests helped me understand the code
 |---|---|---|---|---|---|
 | C01 | ChatGPT (GPT-6) | November 20-21, 2026 | Discussed and reviewed Assignment 3 functionality, performance improvements, and testing. | `index.html`, `js/script.js`, `css/styles.css`, `assets/images/` | Implemented GitHub API integration, filtering, sorting, and localStorage with guidance from ChatGPT. Modified the repository section's HTML and CSS, optimized project images, and tested the functionality, saved preferences, responsive layout, and error handling. Used Lighthouse to verify that the mobile performance score improved from 94 to 99. |
 
+| A01 | ChatGPT (GPT-6) | November 20–21, 2026 | Modified initial GitHub API code suggestions | index.html, js/script.js | With AI help and discussion added async/await, response checking, loading and error messages, and safe repository links. Tested repository loading and API failure handling. | 
+
+| A02 | ChatGPT (GPT-6) | November 20–21, 2026 | Modified initial filtering and sorting code suggestions | index.html, js/script.js | With AI help and discussion, combined filtering and sorting, added the Other Languages option, and tested all dropdown combinations. | 
+
+| A03 | ChatGPT (GPT-6) | November 20–21, 2026 | Modified initial localStorage code suggestions | js/script.js | With AI help and discussion, updated the storage keys and restored saved preferences when the page loads. Tested by changing the options and refreshing the page. | 
+
+| A04 | ChatGPT (GPT-6) | November 20–21, 2026 | Modified initial performance improvement suggestions | index.html, css/styles.css, assets/images/ | With AI help and discussion, resized and compressed project images, added lazy loading and image dimensions, and verified the performance improvement using Lighthouse. | 
+
 
 ## AI Usage Declaration
 
