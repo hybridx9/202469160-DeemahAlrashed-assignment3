@@ -57,6 +57,10 @@ const repoFilter = document.getElementById("repo-filter");
 const repoSort = document.getElementById("repo-sort");
 let repositories = [];
 
+// Restore saved filter and sort preferences
+repoFilter.value = localStorage.getItem("repoFilter") || "all";
+repoSort.value = localStorage.getItem("repoSort") || "az";
+
 // Filter and sort repositories before displaying them
 function displayRepositories() {
     const selectedFilter = repoFilter.value;
@@ -121,5 +125,14 @@ async function loadRepositories() {
 }
 
 loadRepositories();
-repoFilter.addEventListener("change", displayRepositories);
-repoSort.addEventListener("change", displayRepositories);
+
+// To save preferences when the visitor changes a dropdown
+repoFilter.addEventListener("change", function () {
+    localStorage.setItem("repoFilter", repoFilter.value);
+    displayRepositories();
+});
+
+repoSort.addEventListener("change", function () {
+    localStorage.setItem("repoSort", repoSort.value);
+    displayRepositories();
+});
