@@ -125,6 +125,40 @@ footer {
     border-radius: 4px;
 }
 
+/* Style repository filter and sort controls */
+#github-projects select {
+    padding: 8px 12px;
+    margin: 5px 15px 15px 5px;
+    font: inherit;
+    font-size: 14px;
+    color: #1f3a5f;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#github-projects select:focus {
+    outline: 2px solid #1f3a5f;
+    outline-offset: 2px;
+}
+
+/* Display repositories as a simple list */
+#repo-list > div {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#repo-list a {
+    color: #1f3a5f;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+#repo-list a:hover {
+    text-decoration: underline;
+}
+
 /* Tablet layout */
 @media (max-width: 768px) {
     main {
